@@ -9,10 +9,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
 import com.entities.Note;
 import com.helper.FactoryProvider;
 
@@ -37,7 +33,7 @@ public class UpdateServlet extends HttpServlet
 
 			EntityManager entityManager = FactoryProvider.getFactory().createEntityManager();
 			EntityTransaction transaction = entityManager.getTransaction(); 
-		
+			transaction.begin();
 			Note note = entityManager.find(Note.class, noteId); // here we find note id & store in 'note'
 
 			note.setTitle(title);
