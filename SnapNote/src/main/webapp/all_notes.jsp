@@ -40,8 +40,8 @@
 			<!-- End of scriptlet tag-1 in which we write java logic processing code -->
 
 			<!-- Loop between this scriptlet tag 1 and 2 applied to print list content 1 by 1 after iterating all -->
-				<div class="card mt-3" >
-					<img class="card-img-top m-4 mx-auto" style="max-width:100px;" src="img/seenotes.webp" alt="Card image cap">
+				<div class="card mt-3 " >
+					<img class="card-img-top m-4 mx-auto" style="max-width:200px;" src="img/seenotes.webp" alt="Card image cap">
 					<div class="card-body px-5">
 						<!-- Below using 'Expression tag' we had print 'Note Title' using get method from object 'note'-->
 						<h5 class="card-title"><%= note.getTitle()%></h5>
